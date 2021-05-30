@@ -39,6 +39,7 @@ SYMLINKS+=('.scripts')
 ln -sf $SCRIPT_DIR/.zshrc $HOME/.zshrc
 SYMLINKS+=('.zshrc')
 
+echo "Created the following symlinks in $HOME:"
 echo ${SYMLINKS[@]}
 
 #==============
