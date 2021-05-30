@@ -23,11 +23,11 @@ sudo rm -rf $HOME/.zshrc > /dev/null 2>&1
 SYMLINKS=()
 ln -sf $SCRIPT_DIR/.bashrc $HOME/.bashrc
 SYMLINKS+=('.bashrc')
-ln -sf $SCRIPT_DIR/config/alacritty $HOME/.config/alacritty
+ln -sf $SCRIPT_DIR/.config/alacritty $HOME/.config/alacritty
 SYMLINKS+=('.config/alacritty')
-ln -sf $SCRIPT_DIR/config/htop $HOME/.config/htop
+ln -sf $SCRIPT_DIR/.config/htop $HOME/.config/htop
 SYMLINKS+=('.config/htop')
-ln -sf $SCRIPT_DIR/config/ranger $HOME/.config/ranger
+ln -sf $SCRIPT_DIR/.config/ranger $HOME/.config/ranger
 SYMLINKS+=('.config/ranger')
 ln -sf $SCRIPT_DIR/.config/tmux $HOME/.config/tmux
 SYMLINKS+=('.config/tmux')
