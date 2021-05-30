@@ -1,6 +1,5 @@
 #!/bin/bash
 
-local dir dirs
 dirs=$(ls -a -1) &&
 dir=$(echo "$dirs" | fzf --height=50%) &&
 

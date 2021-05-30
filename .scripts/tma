@@ -1,6 +1,5 @@
 #!/bin/bash
 
-local sess
 sess="$(tmux ls | sed "s/:.*//" | fzf --height 40% --reverse --select-1 --exit-0)"
 
 [[ -n $sess ]] && tmux new -A -s $sess

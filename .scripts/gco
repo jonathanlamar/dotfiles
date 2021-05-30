@@ -1,6 +1,5 @@
 #!/bin/bash
 
-local branches branch
 branches=$(git branch -a) &&
 branch=$(echo "$branches" | fzf --height=50% +s +m -e) &&
 

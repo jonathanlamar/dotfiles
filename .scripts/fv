@@ -1,5 +1,4 @@
 #!/bin/bash
 
-local file
 file="$(fzf --height 40% --reverse --query="$1" --select-1 --exit-0)"
 [[ -n $file ]] && vim $file
