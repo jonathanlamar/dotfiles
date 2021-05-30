@@ -18,7 +18,6 @@ sudo rm -rf $HOME/.zshrc > /dev/null 2>&1
 
 #==============
 # Create symlinks in the home folder
-# Allow overriding with files of matching names in the custom-configs dir
 #==============
 SYMLINKS=()
 ln -sf $SCRIPT_DIR/.bashrc $HOME/.bashrc
