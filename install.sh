@@ -17,20 +17,6 @@ sudo rm -rf $HOME/.scripts > /dev/null 2>&1
 sudo rm -rf $HOME/.zshrc > /dev/null 2>&1
 
 #==============
-# Install oh-my-zsh
-#==============
-if [ -d $HOME/.oh-my-zsh ]
-then
-    echo "$HOME/.oh-my-zsh found.  Deleting it."
-    rm -rf $HOME/.oh-my-zsh
-fi
-
-git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh
-
-# Place custom theme in correct location
-ln -sf $SCRIPT_DIR/mine.zsh-theme $HOME/.oh-my-zsh/custom/themes/mine.zsh-theme
-
-#==============
 # Create symlinks in the home folder
 # Allow overriding with files of matching names in the custom-configs dir
 #==============
@@ -55,6 +41,25 @@ ln -sf $SCRIPT_DIR/.zshrc $HOME/.zshrc
 SYMLINKS+=('.zshrc')
 
 echo ${SYMLINKS[@]}
+
+#==============
+# Install oh-my-zsh
+#==============
+if [ -d $HOME/.oh-my-zsh ]
+then
+    echo "$HOME/.oh-my-zsh found.  Deleting it."
+    rm -rf $HOME/.oh-my-zsh
+fi
+
+git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh
+
+# Place custom theme in correct location
+ln -sf $SCRIPT_DIR/mine.zsh-theme $HOME/.oh-my-zsh/custom/themes/mine.zsh-theme
+
+#==============
+# Install tpm
+#==============
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 #==============
 # And we are done
