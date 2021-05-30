@@ -9,8 +9,8 @@ neovim config (see [here](https://github.com/jonathanlamar/nvim) for that).
 2. Back up your dotfiles.
 3. Put any bash/zshell rc contents specific to **your** computer in
    `~/.this_computer_profile`.
-2. Run `./install.sh`.  The files in this repo will be copied to where they need
-   to be.  It is up to you to install the programs and their dependencies.
+2. Run `./install.sh`.  The files in this repo will be symlinked to your home
+   folder.  It is up to you to install the programs and their dependencies.
 
 ## Dependencies
 
