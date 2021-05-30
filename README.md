@@ -1,7 +1,7 @@
 # Dotfiles
 
 Version 2 - This is meant to be OS-agnostic and specifically _excludes_ my
-neovim config (see [here](https://github.com/jonathanlamar/neovim) for that).
+neovim config (see [here](https://github.com/jonathanlamar/nvim) for that).
 
 ## How to install
 
