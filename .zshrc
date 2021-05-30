@@ -112,4 +112,4 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.profile ]] && . ~/.profile
 
 # Store zsh config specific to computer in this untracked file
-[[ -f ~/.this_computer_profile && . ~/.this_computer_profile ]]
+[[ -f ~/.this_computer_profile ]] && . ~/.this_computer_profile
