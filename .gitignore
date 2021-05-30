@@ -1,0 +1,8 @@
+.config/alacritty/*
+!.config/alacritty/alacritty.yml
+.config/htop/*
+!.config/htop/htoprc
+.config/ranger/*
+!.config/ranger/rc.conf
+.config/tmux/*
+!.config/tmux/tmux.conf

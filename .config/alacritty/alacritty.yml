@@ -1,0 +1,266 @@
+window:
+  dimensions:
+    columns: 100
+    lines: 50
+
+  padding:
+    x: 2
+    y: 2
+
+font:
+  size: 13
+
+  # Offset y can be thought of as vertical spacing.
+  offset:
+    x: 0
+    y: 0
+
+  normal:
+    family: Hack Nerd Font
+    style: Regular
+
+  bold:
+    family: Hack Nerd Font
+    style: Bold
+
+  italic:
+    family: Hack Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: Hack Nerd Font
+    style: Bold Italic
+
+# Colorschems
+schemes:
+  afterglow: &afterglow # Default colors
+    primary:
+      # background: '#2c2c2c'
+      background: "#000000"
+      foreground: "#d6d6d6"
+
+      dim_foreground: "#dbdbdb"
+      bright_foreground: "#d9d9d9"
+      # dim_background:    '#202020' # not sure
+      dim_background: "#000000"
+      # bright_background: '#3a3a3a' # not sure
+      bright_background: "#000000"
+
+    # Cursor colors
+    cursor:
+      text: "#2c2c2c"
+      cursor: "#d9d9d9"
+
+    # Normal colors
+    normal:
+      black: "#1c1c1c"
+      red: "#bc5653"
+      green: "#909d63"
+      yellow: "#ebc17a"
+      blue: "#7eaac7"
+      magenta: "#aa6292"
+      cyan: "#86d3ce"
+      white: "#cacaca"
+
+    # Bright colors
+    bright:
+      black: "#636363"
+      red: "#bc5653"
+      green: "#909d63"
+      yellow: "#ebc17a"
+      blue: "#7eaac7"
+      magenta: "#aa6292"
+      cyan: "#86d3ce"
+      white: "#f7f7f7"
+
+    # Dim colors
+    dim:
+      black: "#232323"
+      red: "#74423f"
+      green: "#5e6547"
+      yellow: "#8b7653"
+      blue: "#556b79"
+      magenta: "#6e4962"
+      cyan: "#5c8482"
+      white: "#828282"
+
+    draw_bold_text_with_bright_colors: true
+
+  # Colors (Gruvbox dark)
+  gruvbox: &gruvbox # Default colors
+    primary:
+      # hard contrast:
+      background: "#1d2021"
+      # medium contrast background: '#282828'
+      # soft contrast: background = '#32302f'
+      foreground: "#ebdbb2"
+
+    # Normal colors
+    normal:
+      black: "#282828"
+      red: "#cc241d"
+      green: "#98971a"
+      yellow: "#d79921"
+      blue: "#458588"
+      magenta: "#b16286"
+      cyan: "#689d6a"
+      white: "#a89984"
+
+    # Bright colors
+    bright:
+      black: "#928374"
+      red: "#fb4934"
+      green: "#b8bb26"
+      yellow: "#fabd2f"
+      blue: "#83a598"
+      magenta: "#d3869b"
+      cyan: "#8ec07c"
+      white: "#ebdbb2"
+
+    draw_bold_text_with_bright_colors: true
+
+  # Colors (Ayu Mirage)
+  ayu: &ayu # Default colors
+    primary:
+      background: "#202734"
+      foreground: "#CBCCC6"
+
+    # Normal colors
+    normal:
+      black: "#191E2A"
+      red: "#FF3333"
+      green: "#BAE67E"
+      yellow: "#FFA759"
+      blue: "#73D0FF"
+      magenta: "#FFD580"
+      cyan: "#95E6CB"
+      white: "#C7C7C7"
+
+    # Bright colors
+    bright:
+      black: "#686868"
+      red: "#F27983"
+      green: "#A6CC70"
+      yellow: "#FFCC66"
+      blue: "#5CCFE6"
+      magenta: "#FFEE99"
+      cyan: "#95E6CB"
+      white: "#FFFFFF"
+
+    draw_bold_text_with_bright_colors: true
+
+  # Colors (One Darker)
+  onedark: &onedark # Default colors
+    primary:
+      background: "#1B1D23"
+      foreground: "#abb2bf"
+      #
+    # Normal colors
+    normal:
+      black: "#1e2127"
+      red: "#e06c75"
+      green: "#98c379"
+      yellow: "#d19a66"
+      blue: "#61afef"
+      magenta: "#c678dd"
+      cyan: "#56b6c2"
+      white: "#abb2bf"
+
+    # Bright colors
+    bright:
+      black: "#5c6370"
+      red: "#e06c75"
+      green: "#98c379"
+      yellow: "#d19a66"
+      blue: "#61afef"
+      magenta: "#c678dd"
+      cyan: "#56b6c2"
+      white: "#ffffff"
+      # Default colors
+      primary:
+        background: "#282c34"
+        foreground: "#abb2bf"
+
+    draw_bold_text_with_bright_colors: true
+
+  # Base16 PaperColor Dark 256 - alacritty color config
+  # Jon Leopard (http://github.com/jonleopard) based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
+  papercolor: &papercolor # Default colors
+    primary:
+      background: "0x1c1c1c"
+      foreground: "0x808080"
+
+    # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: "0x1c1c1c"
+      cursor: "0x808080"
+
+    # Normal colors
+    normal:
+      black: "0x1c1c1c"
+      red: "0x585858"
+      green: "0xaf87d7"
+      yellow: "0xafd700"
+      blue: "0xff5faf"
+      magenta: "0x00afaf"
+      cyan: "0xffaf00"
+      white: "0x808080"
+
+    # Bright colors
+    bright:
+      black: "0xd7af5f"
+      red: "0x585858"
+      green: "0xaf87d7"
+      yellow: "0xafd700"
+      blue: "0xff5faf"
+      magenta: "0x00afaf"
+      cyan: "0xffaf00"
+      white: "0xd0d0d0"
+
+    draw_bold_text_with_bright_colors: true
+
+    indexed_colors:
+      - { index: 16, color: "0x5faf5f" }
+      - { index: 17, color: "0x5f8787" }
+      - { index: 18, color: "0xaf005f" }
+      - { index: 19, color: "0x5faf00" }
+      - { index: 20, color: "0x5fafd7" }
+      - { index: 21, color: "0xd7875f" }
+
+# Set colors and opacity here
+colors: *gruvbox
+background_opacity: 0.95
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+cursor:
+  # Cursor style
+  #
+  # Values for 'style':
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  style: Block
+
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: true
+
+key_bindings:
+  # (Windows, Linux, and BSD only)
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Plus, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: H, mods: Alt, chars: "\x1bh" }
+  - { key: J, mods: Alt, chars: "\x1bj" }
+  - { key: K, mods: Alt, chars: "\x1bk" }
+  - { key: L, mods: Alt, chars: "\x1bl" }
+  - { key: O, mods: Alt, chars: "\x1bo" }
+
+  # Mac OS only
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  # - { key: F, mods: Command, action: ToggleFullscreen }

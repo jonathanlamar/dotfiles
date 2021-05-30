@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ -n $1 ]]; then
+    tmux new -A -s $1
+else
+    tmux
+fi
