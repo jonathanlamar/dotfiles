@@ -16,7 +16,7 @@ neovim config (see [here](https://github.com/jonathanlamar/nvim) for that).
 
 This may not be a complete list.
 
-* zshell and oh-my-zsh
+* zshell
 * fzf
 * exuberant ctags
 * ranger
