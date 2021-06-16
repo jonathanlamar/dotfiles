@@ -29,7 +29,7 @@ function fbr() {
     local branches branch
 
     branches=$(git branch) &&
-    branch=$(echo "$branches" | fzf --height=50% +s +m -e) &&
+    branch=$(echo "$branches" | fzf --reverse --height 40%) &&
 
     git checkout $(echo "$branch" | sed "s:.* remotes/origin/::" | sed "s:.* ::")
 }
