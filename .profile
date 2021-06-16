@@ -15,13 +15,13 @@ export PATH=$SCRIPTS:$PATH
 
 # FIXME: This needs to be a function because a script can't find bash history
 # for some reason.
-function fhist() {
+function fh() {
     local lines cmd
 
     lines=$(history | sed 's/^ *[0-9\*]* *//')
     cmd=$(echo $lines | fzf --reverse --height 40%)
 
-    [[ -n $cmd ]] && $(cmd)
+    [[ -n $cmd ]] && eval $cmd
 }
 
 # FIXME: This also won't work as a script, but I do not know why
