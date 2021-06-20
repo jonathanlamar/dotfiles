@@ -19,9 +19,9 @@ function fh() {
     local lines cmd
 
     lines=$(history | sed 's/^ *[0-9\*]* *//')
-    cmd=$(echo $lines | fzf --tac --reverse --height 40%)
+    cmd=$(echo $lines | fzf --exact --tac --no-sort --reverse --height 41%)
 
-    [[ -n $cmd ]] && eval $cmd
+    [[ -n $cmd ]] && print -z $cmd
 }
 
 # FIXME: This also won't work as a script, but I do not know why
