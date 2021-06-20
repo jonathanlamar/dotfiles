@@ -15,6 +15,7 @@ sudo rm -rf $HOME/.ctags > /dev/null 2>&1
 sudo rm -rf $HOME/.profile > /dev/null 2>&1
 sudo rm -rf $HOME/.scripts > /dev/null 2>&1
 sudo rm -rf $HOME/.zshrc > /dev/null 2>&1
+sudo rm -rf $HOME/.zprofile > /dev/null 2>&1
 
 #==============
 # Create symlinks in the home folder
@@ -30,31 +31,19 @@ ln -sf $SCRIPT_DIR/.config/ranger $HOME/.config/ranger
 SYMLINKS+=('.config/ranger')
 ln -sf $SCRIPT_DIR/.config/tmux $HOME/.config/tmux
 SYMLINKS+=('.config/tmux')
+ln -sf $SCRIPT_DIR/.config/zshell $HOME/.config/zshell
+SYMLINKS+=('.config/zshell')
 ln -sf $SCRIPT_DIR/.ctags $HOME/.ctags
 SYMLINKS+=('.ctags')
 ln -sf $SCRIPT_DIR/.profile $HOME/.profile
 SYMLINKS+=('.profile')
 ln -sf $SCRIPT_DIR/.scripts $HOME/.scripts
 SYMLINKS+=('.scripts')
-ln -sf $SCRIPT_DIR/.zshrc $HOME/.zshrc
-SYMLINKS+=('.zshrc')
+ln -sf $SCRIPT_DIR/.zprofile $HOME/.zprofile
+SYMLINKS+=('.zprofile')
 
 echo "Created the following symlinks in $HOME:"
 echo ${SYMLINKS[@]}
-
-#==============
-# Install oh-my-zsh
-#==============
-if [ -d $HOME/.oh-my-zsh ]
-then
-    echo "$HOME/.oh-my-zsh found.  Deleting it."
-    rm -rf $HOME/.oh-my-zsh
-fi
-
-git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh
-
-# Place custom theme in correct location
-ln -sf $SCRIPT_DIR/mine.zsh-theme $HOME/.oh-my-zsh/custom/themes/mine.zsh-theme
 
 #==============
 # Install tpm

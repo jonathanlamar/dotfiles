@@ -1,7 +1,11 @@
 # Dotfiles
 
-Version 2 - This is meant to be OS-agnostic and specifically _excludes_ my
+Version 2 - This is meant to be Mac specific and specifically _excludes_ my
 neovim config (see [here](https://github.com/jonathanlamar/nvim) for that).
+Although, this should generalize to linux with minor changes.
+
+Some of the minimalist zshell config were cloned directly from
+[Chris@Machine's machfiles repo](https://github.com/ChristianChiarulli/Machfiles).
 
 ## How to install
 
