@@ -43,6 +43,9 @@ zsh_add_completion "jonathanlamar/git-zsh-completion" false
 
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 
+# Enable pip completion.  It's a special case
+# eval "`pip3 completion --zsh`"
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line
