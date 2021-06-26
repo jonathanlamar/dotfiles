@@ -9,6 +9,9 @@ zle_highlight=('paste:none')
 # beeping is annoying
 unsetopt BEEP
 
+export HISTFILE=$ZDOTDIR/.zsh_history
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 
 # completions
 autoload -Uz compinit
