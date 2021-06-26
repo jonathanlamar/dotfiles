@@ -17,6 +17,9 @@ alias rm='rm -i'
 alias psmem='ps auxf | sort -nr -k 4 | head -5'
 # get top process eating cpu ##
 alias pscpu='ps auxf | sort -nr -k 3 | head -5'
+# IMO this should not be necessary, but history started acting funny after I
+# moved away from oh-my-zsh.  This returns expected behavior.
+alias history='history 1'
 
 # Dotfiles for easy access
 export PROFILE=$HOME/.profile
