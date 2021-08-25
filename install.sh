@@ -12,6 +12,7 @@ sudo rm -rf $HOME/.config/flake8 > /dev/null 2>&1
 sudo rm -rf $HOME/.config/htop > /dev/null 2>&1
 sudo rm -rf $HOME/.config/ranger > /dev/null 2>&1
 sudo rm -rf $HOME/.config/tmux > /dev/null 2>&1
+sudo rm -rf $HOME/.config/zshell > /dev/null 2>&1
 sudo rm -rf $HOME/.ctags > /dev/null 2>&1
 sudo rm -rf $HOME/.profile > /dev/null 2>&1
 sudo rm -rf $HOME/.scripts > /dev/null 2>&1
