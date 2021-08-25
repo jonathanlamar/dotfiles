@@ -4,10 +4,11 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 #==============
-# Remove old dot flies
+# Remove old dotflies
 #==============
 sudo rm -rf $HOME/.bashrc > /dev/null 2>&1
 sudo rm -rf $HOME/.config/alacritty > /dev/null 2>&1
+sudo rm -rf $HOME/.config/flake8 > /dev/null 2>&1
 sudo rm -rf $HOME/.config/htop > /dev/null 2>&1
 sudo rm -rf $HOME/.config/ranger > /dev/null 2>&1
 sudo rm -rf $HOME/.config/tmux > /dev/null 2>&1
@@ -25,6 +26,8 @@ ln -sf $SCRIPT_DIR/.bashrc $HOME/.bashrc
 SYMLINKS+=('.bashrc')
 ln -sf $SCRIPT_DIR/.config/alacritty $HOME/.config/alacritty
 SYMLINKS+=('.config/alacritty')
+ln -sf $SCRIPT_DIR/.config/flake8 $HOME/.config/flake8
+SYMLINKS+=('.config/flake8')
 ln -sf $SCRIPT_DIR/.config/htop $HOME/.config/htop
 SYMLINKS+=('.config/htop')
 ln -sf $SCRIPT_DIR/.config/ranger $HOME/.config/ranger
