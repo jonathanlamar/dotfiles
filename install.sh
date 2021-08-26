@@ -10,6 +10,7 @@ sudo rm -rf $HOME/.bashrc > /dev/null 2>&1
 sudo rm -rf $HOME/.config/alacritty > /dev/null 2>&1
 sudo rm -rf $HOME/.config/flake8 > /dev/null 2>&1
 sudo rm -rf $HOME/.config/htop > /dev/null 2>&1
+sudo rm -rf $HOME/.config/lvim > /dev/null 2>&1
 sudo rm -rf $HOME/.config/ranger > /dev/null 2>&1
 sudo rm -rf $HOME/.config/tmux > /dev/null 2>&1
 sudo rm -rf $HOME/.config/zshell > /dev/null 2>&1
@@ -31,6 +32,8 @@ ln -sf $SCRIPT_DIR/.config/flake8 $HOME/.config/flake8
 SYMLINKS+=('.config/flake8')
 ln -sf $SCRIPT_DIR/.config/htop $HOME/.config/htop
 SYMLINKS+=('.config/htop')
+ln -sf $SCRIPT_DIR/.config/lvim $HOME/.config/lvim
+SYMLINKS+=('.config/lvim')
 ln -sf $SCRIPT_DIR/.config/ranger $HOME/.config/ranger
 SYMLINKS+=('.config/ranger')
 ln -sf $SCRIPT_DIR/.config/tmux $HOME/.config/tmux

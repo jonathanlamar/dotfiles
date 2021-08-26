@@ -6,3 +6,5 @@
 !.config/ranger/rc.conf
 .config/tmux/*
 !.config/tmux/tmux.conf
+.config/lvim/*
+!.config/lvim/*.lua
