@@ -13,6 +13,25 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- lvim.keys.normal_mode["<C-Up>"] = ""
 -- edit a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
+lvim.keys.normal_mode["<Up>"] = "<Nop>"
+lvim.keys.normal_mode["<Down>"] = "<Nop>"
+lvim.keys.normal_mode["<Left>"] = "<Nop>"
+lvim.keys.normal_mode["<Right>"] = "<Nop>"
+lvim.keys.normal_mode["<C-Up>"] = "<Nop>"
+lvim.keys.normal_mode["<C-Down>"] = "<Nop>"
+lvim.keys.normal_mode["<C-Left>"] = "<Nop>"
+lvim.keys.normal_mode["<C-Right>"] = "<Nop>"
+lvim.keys.insert_mode["<C-k>"] = "<Up>"
+lvim.keys.insert_mode["<C-j>"] = "<Down>"
+lvim.keys.insert_mode["<C-h>"] = "<Left>"
+lvim.keys.insert_mode["<C-l>"] = "<Right>"
+
+lvim.keys.normal_mode["<M-o>"] = "o<Esc>"
+
+lvim.keys.normal_mode["M-j"] = ":resize -1<CR>"
+lvim.keys.normal_mode["M-k"] = ":resize +1<CR>"
+lvim.keys.normal_mode["M-h"] = ":vertical resize -1<CR>"
+lvim.keys.normal_mode["M-l"] = ":vertical resize +1<CR>"
 
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>lua require'telescope'.extensions.project.project{}<CR>", "Projects" }
@@ -25,6 +44,90 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 --   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 --   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnosticss" },
 -- }
+lvim.builtin.which_key.mappings["h"] = { "<cmd>split<CR>", "split" }
+lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<CR>", "vertical split" }
+lvim.builtin.which_key.mappings["g"] = {
+  name = "Git",
+  A = { "<cmd>Git add .<CR>" , "add all"},
+  a = { "<cmd>Git add %<CR>" , "add current"},
+  b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+  -- c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+  -- c = {
+  --   "<cmd>Telescope git_bcommits<cr>",
+  --   "Checkout commit(for current file)",
+  -- },
+  B = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+  c = { "<cmd>Git commit<CR>" , "commit"},
+  d = { "<cmd>Gdiffsplit<CR>" , "diff split"},
+  j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
+  k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
+  p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+  r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+  R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+  s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+  S = {"<cmd>Gstatus<CR>" , "git status"},
+  u = {
+    "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
+    "Undo Stage Hunk",
+  },
+  o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+  w = {"<cmd>GBrowse<CR>" , "view in browser"}
+}
+lvim.builtin.which_key.mappings["l"] = {
+  name = "LSP",
+  -- a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+  d = {
+    "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()", "Line Diagnostics"
+  },
+  D = {
+    "<cmd>Telescope lsp_document_diagnostics<cr>",
+    "Document Diagnostics",
+  },
+  w = {
+    "<cmd>Telescope lsp_workspace_diagnostics<cr>",
+    "Workspace Diagnostics",
+  },
+  -- f = { "<cmd>silent FormatWrite<cr>", "Format" },
+  f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+  g = {
+    name = "GoTo",
+    d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Definition" },
+    r = { "<cmd>lua vim.lsp.buf.references()<CR>", "References"},
+    t = { "<cmd>vim.lsp.buf.type_definition()<cr>", "Type Definition" },
+  },
+  h = {"<cmd>lua vim.lsp.buf.hover()<CR>", "Signature Help"},
+  i = { "<cmd>LspInfo<cr>", "Info" },
+  j = {
+    "<cmd>lua vim.lsp.diagnostic.goto_next({popup_opts = {border = lvim.lsp.popup_border}})<cr>",
+    "Next Diagnostic",
+  },
+  k = {
+    "<cmd>lua vim.lsp.diagnostic.goto_prev({popup_opts = {border = lvim.lsp.popup_border}})<cr>",
+    "Prev Diagnostic",
+  },
+  p = {
+    name = "Peek",
+    d = { "<cmd>lua require('lsp.peek').Peek('definition')<cr>", "Definition" },
+    t = { "<cmd>lua require('lsp.peek').Peek('typeDefinition')<cr>", "Type Definition" },
+    -- i = { "<cmd>lua require('lsp.peek').Peek('implementation')<cr>", "Implementation" },
+  },
+  q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+  r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+  s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+  S = {
+    "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+    "Workspace Symbols",
+  },
+}
+lvim.builtin.which_key.mappings["t"] = {
+  name = "+Toggle",
+  c = {"<cmd>TagbarToggle<cr>"           , "tagbar"},
+  -- g = {"<cmd>call GoyoNoLines()<CR>"     , "goyo"},
+  n = {"<cmd>set nonumber!<CR>"          , "line-numbers"},
+  r = {"<cmd>set norelativenumber!<CR>"  , "relative line nums"},
+  s = {"<cmd>let @/ = \"\"<CR>"          , "remove search highlight"},
+  w = {"<cmd>set nowrap!<CR>"            , "wrap text"}
+}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -60,7 +163,7 @@ lvim.lang.python.formatters = {
 lvim.lang.python.linters = {
   {
     exe = "flake8",
-    args = {"--max-line-length=88"}
+    args = {}
   }
 }
 
@@ -108,7 +211,9 @@ lvim.plugins = {
     {
         "majutsushi/tagbar",
         ft = "python"
-    }
+    },
+    {"tpope/vim-fugitive"},
+    {"tpope/vim-rhubarb"}
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
