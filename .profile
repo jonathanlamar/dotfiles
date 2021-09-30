@@ -2,7 +2,6 @@
 alias ls='ls -G'
 alias ll="ls -lhG"
 alias la="ls -alhG"
-alias vim="nvim"
 alias cl=clear
 alias jnb="jupyter notebook"
 # Colorize grep output (good for log files)
