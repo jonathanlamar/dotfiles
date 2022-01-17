@@ -1,35 +1,6 @@
-window:
-  dimensions:
-    columns: 100
-    lines: 50
-
-  padding:
-    x: 2
-    y: 2
-
-font:
-  size: 14
-
-  # Offset y can be thought of as vertical spacing.
-  offset:
-    x: 0
-    y: 0
-
-  normal:
-    family: Hack Nerd Font
-    style: Regular
-
-  bold:
-    family: Hack Nerd Font
-    style: Bold
-
-  italic:
-    family: Hack Nerd Font
-    style: Italic
-
-  bold_italic:
-    family: Hack Nerd Font
-    style: Bold Italic
+# Import computer-specific settings
+import:
+  - "~/.config/alacritty/this_computer.yml"
 
 # Colorschems
 schemes:
@@ -229,7 +200,7 @@ schemes:
 
 # Set colors and opacity here
 colors: *gruvbox
-background_opacity: 1
+window.opacity: 1
 
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
@@ -263,4 +234,4 @@ key_bindings:
 
   # Mac OS only
   - { key: N, mods: Command, action: SpawnNewInstance }
-  # - { key: F, mods: Command, action: ToggleFullscreen }
+  - { key: F, mods: Command, action: ToggleFullscreen }
