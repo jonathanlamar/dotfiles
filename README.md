@@ -12,8 +12,10 @@ Some of the minimalist zshell config were cloned directly from
 1. Clone wherever you want.
 2. Back up your dotfiles.
 3. Put any bash/zshell rc contents specific to **your** computer in
-   `~/.this_computer_profile`.
-2. Run `./install.sh`.  The files in this repo will be symlinked to your home
+   `~/.config/overrides/.profile`.
+4. Put any special alacritty config specific to your computer in
+   `~/.config/overrides/alacritty.yml`.
+4. Run `./install.sh`.  The files in this repo will be symlinked to your home
    folder.  It is up to you to install the programs and their dependencies.
 
 ## Dependencies

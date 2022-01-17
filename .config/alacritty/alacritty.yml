@@ -1,6 +1,6 @@
 # Import computer-specific settings
 import:
-  - "~/.config/alacritty/this_computer.yml"
+  - "~/.config/overrides/alacritty.yml"
 
 # Colorschems
 schemes:
