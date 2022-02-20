@@ -8,3 +8,4 @@
 !.config/tmux/tmux.conf
 .config/overrides/*
 !.config/overrides/.gitkeep
+.DS_Store
