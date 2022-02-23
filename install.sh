@@ -13,7 +13,6 @@ sudo rm -rf $HOME/.config/htop > /dev/null 2>&1
 sudo rm -rf $HOME/.config/overrides > /dev/null 2>&1
 sudo rm -rf $HOME/.config/ranger > /dev/null 2>&1
 sudo rm -rf $HOME/.config/tmux > /dev/null 2>&1
-sudo rm -rf $HOME/.config/tmux-powerline > /dev/null 2>&1
 sudo rm -rf $HOME/.config/zshell > /dev/null 2>&1
 sudo rm -rf $HOME/.ctags > /dev/null 2>&1
 sudo rm -rf $HOME/.profile > /dev/null 2>&1
@@ -38,8 +37,6 @@ ln -sf $SCRIPT_DIR/.config/ranger $HOME/.config/ranger
 SYMLINKS+=('.config/ranger')
 ln -sf $SCRIPT_DIR/.config/tmux $HOME/.config/tmux
 SYMLINKS+=('.config/tmux')
-ln -sf $SCRIPT_DIR/.config/tmux-powerline $HOME/.config/tmux-powerline
-SYMLINKS+=('.config/tmux-powerline')
 ln -sf $SCRIPT_DIR/.config/zshell $HOME/.config/zshell
 SYMLINKS+=('.config/zshell')
 ln -sf $SCRIPT_DIR/.ctags $HOME/.ctags
