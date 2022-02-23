@@ -13,11 +13,12 @@ sudo rm -rf $HOME/.config/htop > /dev/null 2>&1
 sudo rm -rf $HOME/.config/overrides > /dev/null 2>&1
 sudo rm -rf $HOME/.config/ranger > /dev/null 2>&1
 sudo rm -rf $HOME/.config/tmux > /dev/null 2>&1
+sudo rm -rf $HOME/.config/tmux-powerline > /dev/null 2>&1
 sudo rm -rf $HOME/.config/zshell > /dev/null 2>&1
 sudo rm -rf $HOME/.ctags > /dev/null 2>&1
 sudo rm -rf $HOME/.profile > /dev/null 2>&1
 sudo rm -rf $HOME/.scripts > /dev/null 2>&1
-sudo rm -rf $HOME/.zshrc > /dev/null 2>&1
+sudo rm -rf $HOME/.tmux-powerlinerc > /dev/null 2>&1
 sudo rm -rf $HOME/.zprofile > /dev/null 2>&1
 
 #==============
@@ -32,12 +33,14 @@ ln -sf $SCRIPT_DIR/.config/flake8 $HOME/.config/flake8
 SYMLINKS+=('.config/flake8')
 ln -sf $SCRIPT_DIR/.config/htop $HOME/.config/htop
 SYMLINKS+=('.config/htop')
-ln -sf $SCRIPT_DIR/.config/ranger $HOME/.config/ranger
-SYMLINKS+=('.config/overrides')
 ln -sf $SCRIPT_DIR/.config/overrides $HOME/.config/overrides
+SYMLINKS+=('.config/overrides')
+ln -sf $SCRIPT_DIR/.config/ranger $HOME/.config/ranger
 SYMLINKS+=('.config/ranger')
 ln -sf $SCRIPT_DIR/.config/tmux $HOME/.config/tmux
 SYMLINKS+=('.config/tmux')
+ln -sf $SCRIPT_DIR/.config/tmux-powerline $HOME/.config/tmux-powerline
+SYMLINKS+=('.config/tmux-powerline')
 ln -sf $SCRIPT_DIR/.config/zshell $HOME/.config/zshell
 SYMLINKS+=('.config/zshell')
 ln -sf $SCRIPT_DIR/.ctags $HOME/.ctags
@@ -46,6 +49,8 @@ ln -sf $SCRIPT_DIR/.profile $HOME/.profile
 SYMLINKS+=('.profile')
 ln -sf $SCRIPT_DIR/.scripts $HOME/.scripts
 SYMLINKS+=('.scripts')
+ln -sf $SCRIPT_DIR/.tmux-powerlinerc $HOME/.tmux-powerlinerc
+SYMLINKS+=('.tmux-powerlinerc')
 ln -sf $SCRIPT_DIR/.zprofile $HOME/.zprofile
 SYMLINKS+=('.zprofile')
 
