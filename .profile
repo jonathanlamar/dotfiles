@@ -29,23 +29,13 @@ export REPOS=$HOME/repos
 # Make sure my scripts are on path
 export PATH=$SCRIPTS:$PATH
 
-# FIXME: This needs to be a function because a script can't find bash history
-# for some reason.
-function fh() {
-    local lines cmd
-
-    lines=$(history | sed 's/^ *[0-9\*]* *//')
-    cmd=$(echo $lines | fzf --exact --tac --no-sort --reverse --height 41%)
-
-    [[ -n $cmd ]] && print -z $cmd
-}
-
-# FIXME: This also won't work as a script, but I do not know why
-function fbr() {
-    local branches branch
-
-    branches=$(git branch) &&
-    branch=$(echo "$branches" | fzf --reverse --height 40%) &&
-
-    git checkout $(echo "$branch" | sed "s:.* remotes/origin/::" | sed "s:.* ::")
-}
+# FIXME: This runs the subcommands as bash or something, because the history is static and different
+# function fh() {
+#     local lines cmd
+#
+#     lines=$(history | sed 's/^ *[0-9\*]* *//')
+#     cmd=$(echo $lines | fzf --exact --tac --no-sort --reverse --height 41%)
+#
+#     [[ -n $cmd ]] && print -z $cmd
+# }
+alias fh="history | sed 's/^ *[0-9\*]* *//' | fzf --exact --tac --no-sort --reverse --height 41%"
