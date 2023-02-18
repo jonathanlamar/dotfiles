@@ -29,7 +29,7 @@ return {
 	initial_cols = 100,
 	initial_rows = 50,
 	font = wt.font("JetBrainsMono Nerd Font"),
-	font_size = 14,
+	font_size = 13,
 	default_cursor_style = "BlinkingBar",
 	cursor_blink_rate = 500,
 	hide_tab_bar_if_only_one_tab = true,
