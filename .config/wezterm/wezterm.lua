@@ -63,48 +63,16 @@ return {
 	},
 	initial_cols = 100,
 	initial_rows = 50,
-	font = wt.font("JetBrainsMono Nerd Font"),
+	font = wt.font("Hack Nerd Font"),
 	font_size = 14,
 	hide_tab_bar_if_only_one_tab = true,
-	window_background_opacity = 0.9,
-	text_background_opacity = 0.7,
+	--[[ window_background_opacity = 0.9, ]]
+	--[[ text_background_opacity = 0.7, ]]
 	alternate_buffer_wheel_scroll_speed = 1,
 	window_padding = {
 		left = 2,
 		right = 2,
 		top = 2,
 		bottom = 2,
-	},
-	keys = {
-		{
-			key = "t",
-			mods = "CMD",
-			action = wt.action({
-				SpawnTab = "DefaultDomain",
-			}),
-		},
-		{
-			key = "w",
-			mods = "CMD",
-			action = wt.action({
-				CloseCurrentTab = {
-					confirm = false,
-				},
-			}),
-		},
-		{
-			key = "Tab",
-			mods = "CTRL",
-			action = wt.action({
-				ActivateTabRelative = 1,
-			}),
-		},
-		{
-			key = "Tab",
-			mods = "CTRL|SHIFT",
-			action = wt.action({
-				ActivateTabRelative = -1,
-			}),
-		},
 	},
 }
