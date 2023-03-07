@@ -75,4 +75,11 @@ return {
 		top = 2,
 		bottom = 2,
 	},
+    keys = {
+        {
+            key = "Enter",
+            mods = "CMD",
+            action = wt.action.ToggleFullScreen,
+        }
+    }
 }
