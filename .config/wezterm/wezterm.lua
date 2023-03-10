@@ -63,8 +63,8 @@ return {
 	},
 	initial_cols = 100,
 	initial_rows = 50,
-	font = wt.font("Hack Nerd Font"),
-	font_size = 14,
+	font = wt.font("UbuntuMono Nerd Font"),
+	font_size = 16,
 	hide_tab_bar_if_only_one_tab = true,
 	--[[ window_background_opacity = 0.9, ]]
 	--[[ text_background_opacity = 0.7, ]]
