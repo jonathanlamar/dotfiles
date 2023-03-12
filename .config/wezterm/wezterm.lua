@@ -23,21 +23,8 @@ wt.on("format-window-title", function(tab, pane, tabs, panes, config)
 end)
 
 return {
-	color_scheme = "Gruvbox",
+	color_scheme = "Gruvbox Material",
 	color_schemes = {
-		["Kanagawa"] = {
-			foreground = "#dcd7ba",
-			background = "#1f1f28",
-			cursor_bg = "#c8c093",
-			cursor_fg = "#c8c093",
-			cursor_border = "#c8c093",
-			selection_fg = "#c8c093",
-			selection_bg = "#2d4f67",
-			scrollbar_thumb = "#16161d",
-			split = "#16161d",
-			ansi = { "#090618", "#c34043", "#76946a", "#c0a36e", "#7e9cd8", "#957fb8", "#6a9589", "#c8c093" },
-			brights = { "#727169", "#e82424", "#98bb6c", "#e6c384", "#7fb4ca", "#938aa9", "#7aa89f", "#dcd7ba" },
-		},
 		["Melange"] = {
 			foreground = "#c9beb4",
 			background = "#292522",
@@ -49,7 +36,7 @@ return {
 			ansi = { "#1c1a18", "#b64b4e", "#78997A", "#E49B5D", "#7F91B2", "#B380B0", "#7B9695", "#C1A78E" },
 			brights = { "#867462", "#D47766", "#85B695", "#EBC06D", "#A3A9CE", "#CF9BC2", "#89B3B6", "#c9beb4" },
 		},
-		["Gruvbox"] = {
+		["Gruvbox Material"] = {
 			foreground = "#ddc7a1",
 			background = "#282828",
 			cursor_bg = "#ddc7a1",
