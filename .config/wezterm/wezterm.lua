@@ -51,7 +51,7 @@ return {
 	initial_cols = 100,
 	initial_rows = 50,
 	font = wt.font("JetBrainsMono Nerd Font"),
-	font_size = 14,
+	font_size = 13,
 	hide_tab_bar_if_only_one_tab = true,
 	--[[ window_background_opacity = 0.9, ]]
 	--[[ text_background_opacity = 0.7, ]]
