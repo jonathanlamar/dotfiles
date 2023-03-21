@@ -18,6 +18,7 @@ sudo rm -rf $HOME/.config/zshell > /dev/null 2>&1
 sudo rm -rf $HOME/.ctags > /dev/null 2>&1
 sudo rm -rf $HOME/.profile > /dev/null 2>&1
 sudo rm -rf $HOME/.scripts > /dev/null 2>&1
+sudo rm -rf $HOME/.vimrc > /dev/null 2>&1
 sudo rm -rf $HOME/.zprofile > /dev/null 2>&1
 
 #==============
@@ -48,6 +49,8 @@ ln -sf $SCRIPT_DIR/.profile $HOME/.profile
 SYMLINKS+=('.profile')
 ln -sf $SCRIPT_DIR/.scripts $HOME/.scripts
 SYMLINKS+=('.scripts')
+ln -sf $SCRIPT_DIR/.vimrc $HOME/.vimrc
+SYMLINKS+=('.vimrc')
 ln -sf $SCRIPT_DIR/.zprofile $HOME/.zprofile
 SYMLINKS+=('.zprofile')
 
