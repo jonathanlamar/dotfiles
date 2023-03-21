@@ -23,7 +23,7 @@ wt.on("format-window-title", function(tab, pane, tabs, panes, config)
 end)
 
 return {
-	color_scheme = "Gruvbox Material",
+	color_scheme = "Kanagawa (Gogh)",
 	color_schemes = {
 		["Melange"] = {
 			foreground = "#c9beb4",
