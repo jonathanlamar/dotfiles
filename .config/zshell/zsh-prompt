@@ -36,7 +36,7 @@ PROMPT="%B%{$fg[white]%}%n@%m:%{$fg[blue]%}%c"
 # PROMPT="%{$fg[green]%}%n@%m %~ %{$reset_color%}%#> "
 PROMPT+="\$vcs_info_msg_0_ "
 # PROMPT_CHAR=" "
-PROMPT_CHAR="->"
+PROMPT_CHAR="󰁔"
 PROMPT+="%(?:%{$fg_bold[green]%}$PROMPT_CHAR:%{$fg_bold[red]%}$PROMPT_CHAR)%{$reset_color%} "
 # TODO look into this for more colors
 # https://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
