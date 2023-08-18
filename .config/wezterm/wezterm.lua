@@ -61,7 +61,7 @@ return {
 	},
 	initial_cols = 100,
 	initial_rows = 50,
-	font = wt.font({family = "JetBrainsMono Nerd Font", weight = "DemiBold" }),
+	font = wt.font({family = "FiraCode Nerd Font", weight = "Medium" }),
 	font_size = 13,
 	hide_tab_bar_if_only_one_tab = true,
 	window_background_opacity = 0.75,
