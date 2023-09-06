@@ -64,9 +64,9 @@ return {
 	font = wt.font({family = "UbuntuMono Nerd Font"}),
 	font_size = 15,
 	hide_tab_bar_if_only_one_tab = true,
-	window_background_opacity = 0.75,
+	window_background_opacity = 0.8,
 	macos_window_background_blur = 30,
-	text_background_opacity = 0.75,
+	text_background_opacity = 0.8,
 	alternate_buffer_wheel_scroll_speed = 1,
 	window_padding = {
 		left = 2,
