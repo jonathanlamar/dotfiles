@@ -62,7 +62,7 @@ return {
 	initial_cols = 100,
 	initial_rows = 50,
 	font = wt.font({family = "JetBrainsMono Nerd Font"}),
-	font_size = 13,
+	font_size = 14,
 	hide_tab_bar_if_only_one_tab = true,
 	window_background_opacity = 0.8,
 	macos_window_background_blur = 30,
