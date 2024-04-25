@@ -44,11 +44,5 @@ return {
 	cursor_blink_rate = 650,
 	cursor_blink_ease_in = "Constant",
 	cursor_blink_ease_out = "Constant",
-	keys = {
-		{
-			key = "Enter",
-			mods = "CMD",
-			action = wt.action.ToggleFullScreen,
-		},
-	},
+	keys = {},
 }
