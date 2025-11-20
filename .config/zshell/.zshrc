@@ -3,15 +3,6 @@
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete
 setopt interactive_comments
-stty stop undef		# Disable ctrl-s to freeze terminal.
-zle_highlight=('paste:none')
-
-# beeping is annoying
-unsetopt BEEP
-
-export HISTFILE=$ZDOTDIR/.zsh_history
-export HISTSIZE=1000000
-export SAVEHIST=1000000
 
 # completions
 autoload -Uz compinit
@@ -38,7 +29,6 @@ zsh_add_file "zsh-prompt"
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-zsh_add_completion "jonathanlamar/git-zsh-completion" false
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
 # More completions https://github.com/zsh-users/zsh-completions
 
@@ -47,12 +37,37 @@ alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git
 # Enable pip completion.  It's a special case
 # eval "`pip3 completion --zsh`"
 
-# Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
-# bindkey '^e' edit-command-line
+########## ALIASES ###########
+alias ls='ls -G'
+alias ll="ls -lhG"
+alias la="ls -alhG"
+alias cl=clear
+alias jnb="jupyter notebook"
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+# get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4 | head -5'
+# get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3 | head -5'
+# IMO this should not be necessary, but history started acting funny after I
+# moved away from oh-my-zsh.  This returns expected behavior.
+alias history='history 1'
+alias fh="history | sed 's/^ *[0-9\*]* *//' | fzf --exact --tac --no-sort --reverse --height 41%"
 
-# Just source .profile
-[[ -f ~/.profile ]] && . ~/.profile
+# Dotfiles for easy access
+export PROFILE=$HOME/.profile
+export SCRIPTS=$HOME/.scripts
+export VIMRC=$HOME/.config/nvim/init.lua
+export REPOS=$HOME/repos
+
+# Make sure my scripts are on path
+export PATH=$SCRIPTS:$PATH
 
 # Store zsh config specific to computer in this untracked file
-[[ -f ~/.config/overrides/.profile ]] && . ~/.config/overrides/.profile
+[[ -f ~/.config/overrides/.zshrc ]] && . ~/.config/overrides/.zshrc
